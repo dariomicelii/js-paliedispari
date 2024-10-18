@@ -24,6 +24,32 @@ palindroma(userWord)
 //Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 //Dichiariamo chi ha vinto.
 
+userPariDispari = prompt("Pari o dispari?")
+userNumchoice = (prompt("Digita un numero da 1 a 5:"))
+console.log("Hai scelto:" + userPariDispari)
+console.log("Hai scelto il numero: " + userNumchoice)
+
+
+function pcChoice(min, max) {
+    choice = (Math.random() * (max - min) + min)
+    console.log("Il computer ha generato il numero: " + choice.toFixed())
+    return choice.toFixed()
+}
+pcNumChoice = pcChoice(1, 5);
+
+
+function isUserWinner(userNumchoice, pcNumChoice, userPariDispari) {
+    const sum = parseInt(userNumchoice) + parseInt(pcNumChoice)
+    console.log(sum)
+    if (sum % 2 === 0 && userPariDispari === "pari") {
+        console.log("Hai vinto!")
+    }else{
+        console.log("Hai perso!")
+    }
+}
+isUserWinner(userNumchoice, pcNumChoice, userPariDispari)
+
+
 //Consigli del giorno
 //1. Scriviamo sempre in italiano i passaggi che vogliamo fare
 //2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
