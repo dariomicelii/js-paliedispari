@@ -3,7 +3,7 @@
 //Chiedere all’utente di inserire una parola
 //Creare una funzione per capire se la parola inserita è palindroma
 
-userWord = prompt("Inserisci una parola per capire se è palindroma o no:")
+userWord = prompt("Inserisci una parola per capire se è palindroma o no ;)")
 
 function reverseWord(userWord){
     return userWord.split('').reverse().join('');
